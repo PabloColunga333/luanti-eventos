@@ -10,6 +10,22 @@
 # production
 /build
 
+# public - compiled files (but keep original assets)
+/public/_next
+/public/404.html
+/public/404/
+/public/contacto/
+/public/corporativo/
+/public/faq/
+/public/galeria/
+/public/paquetes/
+/public/privacidad/
+/public/servicios/
+/public/terminos/
+/public/__next*/
+/public/index.html
+/public/index.txt
+
 # debug
 npm-debug.log*
 yarn-debug.log*
