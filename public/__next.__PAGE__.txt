@@ -1,0 +1,15 @@
+1:"$Sreact.fragment"
+2:I[41442,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"HeroSection"]
+3:I[95302,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"SocialProofStrip"]
+4:I[8106,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"ServicesPreview"]
+5:I[70530,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"PackagesPreview"]
+6:I[95979,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"WhyLuanti"]
+7:I[55083,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"GalleryTeaser"]
+8:I[47597,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"TestimonialsCarousel"]
+9:I[70337,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"HowItWorks"]
+a:I[31294,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"CoverageArea"]
+b:I[82844,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/0efa7026efc5e120.js"],"CTASection"]
+c:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
+0:{"buildId":"jAzQOnisrvJxVslZN59Ml","rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{}],["$","$L4",null,{}],["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}]],[["$","script","script-0",{"src":"/_next/static/chunks/0efa7026efc5e120.js","async":true}]],["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],"loading":null,"isPartial":false}
+e:null

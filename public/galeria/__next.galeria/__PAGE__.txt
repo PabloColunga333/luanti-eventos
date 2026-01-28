@@ -1,0 +1,8 @@
+1:"$Sreact.fragment"
+2:I[96471,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/167f107386a69d2c.js"],"GalleryHero"]
+3:I[40405,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/167f107386a69d2c.js"],"GalleryContent"]
+4:I[82844,["/_next/static/chunks/24b26261fa0529ae.js","/_next/static/chunks/670fffe870b3a211.js","/_next/static/chunks/167f107386a69d2c.js"],"CTASection"]
+5:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+0:{"buildId":"jAzQOnisrvJxVslZN59Ml","rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{}],["$","$L4",null,{"variant":"compact","title":"¿Te gustó lo que viste?","subtitle":"Haz que tu evento sea el próximo en nuestra galería."}]],[["$","script","script-0",{"src":"/_next/static/chunks/167f107386a69d2c.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"loading":null,"isPartial":false}
+7:null
