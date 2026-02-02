@@ -38,14 +38,25 @@ const useCases = [
 
 export function CorporateUseCases() {
   return (
-    <section className="py-16 md:py-24 bg-card/50">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-card/80 to-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
+          >
+            Eventos Corporativos
+          </motion.span>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Casos de Uso</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Nuestros servicios se adaptan a cualquier tipo de evento corporativo.
@@ -62,13 +73,18 @@ export function CorporateUseCases() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-2xl border border-border p-6 hover:border-primary/50 transition-colors"
+                className="group relative bg-card rounded-2xl border border-border p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-primary" />
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div className="relative">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
               </motion.div>
             )
           })}

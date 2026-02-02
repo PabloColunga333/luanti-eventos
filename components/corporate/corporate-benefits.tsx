@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Palette, Clock, Shield, Zap, Users, FileText } from "lucide-react"
+import { Palette, Clock, Shield, Zap, Users, FileText, CheckCircle2 } from "lucide-react"
 
 const benefits = [
   {
@@ -38,21 +38,33 @@ const benefits = [
 
 export function CorporateBenefits() {
   return (
-    <section className="py-16 md:py-24 bg-card/50">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-background via-card/50 to-background relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
+          >
+            ¿Por qué elegirnos?
+          </motion.span>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Beneficios Corporativos</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Entendemos las necesidades específicas de los eventos empresariales.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
           {benefits.map((item, index) => {
             const Icon = item.icon
             return (
@@ -62,14 +74,17 @@ export function CorporateBenefits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start gap-4 p-4"
+                className="group relative bg-card/50 backdrop-blur-sm rounded-2xl border border-border p-5 hover:border-primary/40 hover:bg-card transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                  <CheckCircle2 className="w-5 h-5 text-primary/40 flex-shrink-0 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
                 </div>
               </motion.div>
             )
