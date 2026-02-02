@@ -111,8 +111,17 @@ export function ServicesPreview() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="mt-6">
+          {/* CTA Buttons */}
+          <div className="mt-6 flex flex-col gap-3">
+            <Button
+              asChild
+              variant="outline"
+              className="w-full rounded-xl border-primary text-primary hover:bg-primary/10"
+            >
+              <Link href={`/servicios/${serviceImages[currentIndex].slug}`}>
+                Ver detalles
+              </Link>
+            </Button>
             <Button asChild className="w-full rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground">
               <a
                 href={getWhatsAppUrl(serviceImages[currentIndex].name)}

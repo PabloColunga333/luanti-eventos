@@ -10,8 +10,8 @@ export function PackageTable() {
     `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hola, me interesa cotizar el paquete ${packageName}`)}`
 
   return (
-    <div className="overflow-x-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-w-[600px] md:min-w-0">
+    <div className="w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         {packages.map((pkg, index) => (
           <motion.div
             key={pkg.name}
@@ -24,30 +24,30 @@ export function PackageTable() {
             }`}
           >
             {pkg.popular && (
-              <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2 text-sm font-medium">
+              <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-1 md:py-2 text-xs md:text-sm font-medium">
                 Más Popular
               </div>
             )}
 
-            <div className={`p-6 ${pkg.popular ? "pt-12" : ""}`}>
-              <h3 className="font-serif text-2xl font-semibold mb-2">{pkg.name}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{pkg.hours}</p>
-              <div className="mb-6">
-                <span className="text-sm text-muted-foreground">Desde</span>
-                <p className="text-3xl font-bold text-primary">{pkg.priceFrom}</p>
+            <div className={`p-4 md:p-6 ${pkg.popular ? "pt-8 md:pt-12" : ""}`}>
+              <h3 className="font-serif text-lg md:text-2xl font-semibold mb-1 md:mb-2">{pkg.name}</h3>
+              <p className="text-muted-foreground text-xs md:text-sm mb-3 md:mb-4">{pkg.hours}</p>
+              <div className="mb-4 md:mb-6">
+                <span className="text-xs md:text-sm text-muted-foreground">Desde</span>
+                <p className="text-2xl md:text-3xl font-bold text-primary">{pkg.priceFrom}</p>
               </div>
 
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
                 {pkg.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
+                  <li key={i} className="flex items-start gap-2 md:gap-3 text-xs md:text-sm">
                     {typeof feature.included === "boolean" ? (
                       feature.included ? (
-                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
                       ) : (
-                        <X className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                        <X className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                       )
                     ) : (
-                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
                     )}
                     <span
                       className={
