@@ -20,16 +20,6 @@ export function CorporateHero() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"
-            >
-              <Building2 className="w-4 h-4" />
-              Servicios Empresariales
-            </motion.div>
-            
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 text-balance">
               Entretenimiento{" "}
               <span className="text-primary relative">
@@ -75,24 +65,6 @@ export function CorporateHero() {
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </div>
-            
-            {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -bottom-4 -left-4 md:bottom-6 md:-left-6 bg-card border border-border rounded-2xl p-4 shadow-xl"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold">Branding Incluido</p>
-                  <p className="text-xs text-muted-foreground">Tu marca, tu estilo</p>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
