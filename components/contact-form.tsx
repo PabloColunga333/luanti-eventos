@@ -27,7 +27,10 @@ export function ContactForm() {
     const name = formData.get("name") as string
     const eventType = formData.get("eventType") as string
     const date = formData.get("date") as string
+    const time = formData.get("time") as string
     const city = formData.get("city") as string
+    const guests = formData.get("guests") as string
+    const location = formData.get("location") as string
     const message = formData.get("message") as string
 
     // Build WhatsApp message
@@ -35,7 +38,10 @@ export function ContactForm() {
     whatsappMessage += `*Nombre:* ${name}\n`
     whatsappMessage += `*Tipo de evento:* ${eventType}\n`
     whatsappMessage += `*Fecha:* ${date}\n`
+    whatsappMessage += `*Hora aproximada:* ${time}\n`
     whatsappMessage += `*Ciudad:* ${city}\n`
+    whatsappMessage += `*Número aproximado de invitados:* ${guests}\n`
+    whatsappMessage += `*Ubicación de instalación:* ${location}\n`
 
     if (selectedServices.length > 0) {
       whatsappMessage += `\n*Servicios de interés:*\n`
@@ -119,6 +125,18 @@ export function ContactForm() {
           <Input id="date" name="date" type="date" required className="rounded-xl bg-muted/50 border-border" />
         </div>
 
+        {/* Time */}
+        <div className="space-y-2">
+          <Label htmlFor="time">Hora aproximada del evento *</Label>
+          <Input
+            id="time"
+            name="time"
+            type="time"
+            required
+            className="rounded-xl bg-muted/50 border-border"
+          />
+        </div>
+
         {/* City */}
         <div className="space-y-2">
           <Label htmlFor="city">Ciudad *</Label>
@@ -129,6 +147,35 @@ export function ContactForm() {
             placeholder="Ej: Ciudad de México"
             className="rounded-xl bg-muted/50 border-border"
           />
+        </div>
+
+        {/* Guests */}
+        <div className="space-y-2">
+          <Label htmlFor="guests">Número aproximado de invitados *</Label>
+          <Input
+            id="guests"
+            name="guests"
+            type="number"
+            required
+            min="1"
+            placeholder="Ej: 100"
+            className="rounded-xl bg-muted/50 border-border"
+          />
+        </div>
+
+        {/* Location Type */}
+        <div className="space-y-2">
+          <Label htmlFor="location">Ubicación de instalación *</Label>
+          <select
+            id="location"
+            name="location"
+            required
+            className="w-full rounded-xl bg-muted/50 border border-border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            <option value="">Selecciona...</option>
+            <option value="Planta baja">Planta baja</option>
+            <option value="Se suben escaleras">Se suben escaleras</option>
+          </select>
         </div>
 
         {/* Services */}
