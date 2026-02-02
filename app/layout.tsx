@@ -60,10 +60,14 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/luanti-logo.png",
-    shortcut: "/luanti-logo.png",
-    apple: "/luanti-logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
+  manifest: "/site.webmanifest",
   generator: "v0.app",
 }
 
