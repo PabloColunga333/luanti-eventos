@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { MessageCircle, Building2, Sparkles } from "lucide-react"
+import { MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-data"
 

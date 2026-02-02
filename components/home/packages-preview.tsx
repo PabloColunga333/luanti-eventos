@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { siteConfig } from "@/lib/site-data"
 import { Button } from "@/components/ui/button"
-import { MessageCircle, Star, ArrowRight } from "lucide-react"
+import { MessageCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -35,10 +35,6 @@ export function PackagesPreview() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            <Star className="w-4 h-4" />
-            Paquetes Promocionales
-          </div>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Combina y Ahorra</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Obtén el mejor precio combinando nuestros servicios. Aprovecha nuestras promociones especiales.

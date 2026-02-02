@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageCircle, Percent } from "lucide-react"
+import { MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { combos, siteConfig } from "@/lib/site-data"
 
@@ -15,10 +15,6 @@ export function CombosSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            <Percent className="w-4 h-4" />
-            Paquetes Promocionales
-          </div>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Combina y Ahorra</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Combina servicios y obtén el mejor precio. Más diversión para tus invitados.
