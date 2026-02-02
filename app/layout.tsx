@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/icon-dark-32x32.png",
-    shortcut: "/icon-dark-32x32.png",
-    apple: "/apple-icon.png",
+    icon: "/luanti-logo.png",
+    shortcut: "/luanti-logo.png",
+    apple: "/luanti-logo.png",
   },
   generator: "v0.app",
 }
