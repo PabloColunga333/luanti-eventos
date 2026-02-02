@@ -46,13 +46,6 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                <Icon className="w-6 h-6 text-primary" />
-              </div>
-              <span className="text-sm font-medium text-primary">Servicio Premium</span>
-            </div>
-
             <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-4">{service.heroTitle}</h1>
             <p className="text-lg text-muted-foreground mb-4">{service.heroSubtitle}</p>
             

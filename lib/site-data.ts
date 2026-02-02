@@ -60,7 +60,7 @@ export const services: Service[] = [
       power: "Toma eléctrica funcional",
       setupTime: "30 minutos antes del evento",
     },
-    addons: ["Hora adicional", "Fondo personalizado", "Props temáticos"],
+    addons: ["Hora extra - $1,500 MXN"],
     faqs: [
       {
         question: "¿Cuántas personas caben en una foto?",
@@ -102,7 +102,7 @@ export const services: Service[] = [
       power: "Toma eléctrica funcional",
       setupTime: "30 minutos antes del evento",
     },
-    addons: ["Hora adicional", "Efectos especiales", "Props temáticos"],
+    addons: ["Hora extra - $1,500 MXN"],
     faqs: [
       {
         question: "¿Cuántas personas pueden subir a la plataforma?",
@@ -140,7 +140,7 @@ export const services: Service[] = [
       power: "Toma eléctrica funcional",
       setupTime: "30 minutos antes del evento",
     },
-    addons: ["Hora adicional", "USB personalizada", "Transcripción de mensajes"],
+    addons: ["Hora extra - $1,500 MXN"],
     faqs: [
       {
         question: "¿Necesita operador?",
