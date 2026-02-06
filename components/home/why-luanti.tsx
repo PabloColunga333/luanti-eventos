@@ -1,17 +1,35 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CheckCircle, Clock, Palette, Camera, Users, Star } from "lucide-react"
+import Image from "next/image"
 import { whyLuanti } from "@/lib/site-data"
 
-const iconMap = {
-  award: CheckCircle,
-  clock: Clock,
-  palette: Palette,
-  zap: Camera,
-  users: Users,
-  trophy: Star,
-}
+const featureImages = [
+  {
+    src: "/galeria/WhatsApp%20Image%202026-02-05%20at%203.40.34%20PM.jpg",
+    alt: "Evento social - foto destacada 1",
+  },
+  {
+    src: "/galeria/WhatsApp%20Image%202026-02-05%20at%203.40.36%20PM.jpg",
+    alt: "Evento social - foto destacada 2",
+  },
+  {
+    src: "/galeria/WhatsApp%20Image%202026-02-05%20at%203.48.50%20PM.jpg",
+    alt: "Evento social - foto destacada 3",
+  },
+  {
+    src: "/corporativo/WhatsApp%20Image%202026-02-05%20at%203.40.38%20PM.jpg",
+    alt: "Evento corporativo - foto destacada 1",
+  },
+  {
+    src: "/corporativo/WhatsApp%20Image%202026-02-05%20at%203.55.02%20PM.jpg",
+    alt: "Evento corporativo - foto destacada 2",
+  },
+  {
+    src: "/corporativo/WhatsApp%20Image%202026-02-05%20at%203.55.31%20PM.jpg",
+    alt: "Evento corporativo - foto destacada 3",
+  },
+]
 
 export function WhyLuanti() {
   return (
@@ -31,7 +49,7 @@ export function WhyLuanti() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {whyLuanti.map((item, index) => {
-            const Icon = iconMap[item.icon as keyof typeof iconMap] || Award
+            const image = featureImages[index % featureImages.length]
             return (
               <motion.div
                 key={item.title}
@@ -41,8 +59,8 @@ export function WhyLuanti() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-card rounded-2xl border border-border p-6 hover:border-primary/50 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-primary" />
+                <div className="relative w-14 h-14 rounded-xl overflow-hidden border border-border/60 mb-4">
+                  <Image src={image.src} alt={image.alt} fill className="object-cover" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.description}</p>
