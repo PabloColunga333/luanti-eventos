@@ -20,6 +20,12 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (selectedServices.length === 0) {
+      toast.error("Selecciona al menos un servicio", {
+        description: "El servicio de interés es obligatorio para enviar el formulario.",
+      })
+      return
+    }
     setIsSubmitting(true)
 
     // Get form data
@@ -180,7 +186,7 @@ export function ContactForm() {
 
         {/* Services */}
         <div className="space-y-3">
-          <Label>Servicios de interés</Label>
+          <Label>Servicios de interés *</Label>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {services.map((service) => (
               <label
