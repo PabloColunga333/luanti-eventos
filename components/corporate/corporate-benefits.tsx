@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Check } from "lucide-react"
 
 const benefits = [
   {
@@ -59,9 +60,14 @@ export function CorporateBenefits() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative bg-card/50 backdrop-blur-sm rounded-2xl border border-border p-5 hover:border-primary/40 hover:bg-card transition-all duration-300"
             >
-              <div>
-                <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+              <div className="flex items-start gap-3">
+                <div className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-primary">
+                  <Check className="h-3.5 w-3.5" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
               </div>
             </motion.div>
           ))}

@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Check } from "lucide-react"
 import {
   Carousel,
   CarouselContent,
@@ -88,9 +87,6 @@ export function CorporateUseCases() {
                             className="object-cover"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
-                          <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-black/50 backdrop-blur flex items-center justify-center">
-                            <Check className="w-4 h-4 text-white/90" />
-                          </div>
                         </div>
 
                         <div className="p-6">
