@@ -105,8 +105,8 @@ export function CorporateUseCases() {
                 )
               })}
             </CarouselContent>
-            <CarouselPrevious className="-left-6 md:-left-10 bg-background/90 border border-border/60 shadow-lg shadow-black/10 hover:bg-primary hover:text-primary-foreground hover:border-primary/60" />
-            <CarouselNext className="-right-6 md:-right-10 bg-background/90 border border-border/60 shadow-lg shadow-black/10 hover:bg-primary hover:text-primary-foreground hover:border-primary/60" />
+            <CarouselPrevious className="left-2 md:-left-6 lg:-left-10 size-9 sm:size-10 bg-background/90 border border-border/60 shadow-lg shadow-black/10 hover:bg-primary hover:text-primary-foreground hover:border-primary/60" />
+            <CarouselNext className="right-2 md:-right-6 lg:-right-10 size-9 sm:size-10 bg-background/90 border border-border/60 shadow-lg shadow-black/10 hover:bg-primary hover:text-primary-foreground hover:border-primary/60" />
           </Carousel>
         </div>
       </div>
