@@ -2,9 +2,6 @@
 
 import { motion } from "framer-motion"
 import { whyLuanti } from "@/lib/site-data"
-import { Sparkles, Star, Zap, Heart, Camera, Award } from "lucide-react"
-
-const decorativeIcons = [Sparkles, Star, Zap, Heart, Camera, Award]
 
 export function WhyLuanti() {
   return (
@@ -40,15 +37,6 @@ export function WhyLuanti() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 mb-6"
-          >
-            <Sparkles className="w-8 h-8 text-primary" />
-          </motion.div>
           <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text">
             ¿Por qué elegir Luanti?
           </h2>
@@ -60,7 +48,6 @@ export function WhyLuanti() {
         {/* Grid de tarjetas mejorado */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {whyLuanti.map((item, index) => {
-            const IconComponent = decorativeIcons[index % decorativeIcons.length]
             return (
               <motion.div
                 key={item.title}
@@ -81,15 +68,6 @@ export function WhyLuanti() {
                   {/* Círculo decorativo de fondo */}
                   <div className="absolute -right-8 -top-8 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-150" />
                   
-                  {/* Icono decorativo */}
-                  <motion.div
-                    initial={{ rotate: 0 }}
-                    whileHover={{ rotate: 15, scale: 1.1 }}
-                    className="relative inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 mb-5 group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300"
-                  >
-                    <IconComponent className="w-5 h-5 text-primary transition-transform duration-300" />
-                  </motion.div>
-                  
                   {/* Contenido */}
                   <div className="relative">
                     <h3 className="font-semibold text-xl mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
@@ -98,11 +76,6 @@ export function WhyLuanti() {
                     <p className="text-muted-foreground leading-relaxed">
                       {item.description}
                     </p>
-                  </div>
-                  
-                  {/* Indicador de número sutil */}
-                  <div className="absolute bottom-4 right-4 text-6xl font-bold text-foreground/[0.03] group-hover:text-primary/[0.08] transition-colors duration-500 select-none">
-                    {(index + 1).toString().padStart(2, '0')}
                   </div>
                 </div>
               </motion.div>
