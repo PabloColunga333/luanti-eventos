@@ -16,11 +16,17 @@ export function SocialProofStrip() {
           {/* Stars */}
           <div className="flex items-center gap-2">
             <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
+              {[...Array(4)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 fill-primary text-primary" />
               ))}
+              <span className="relative w-5 h-5">
+                <Star className="w-5 h-5 text-primary/40" />
+                <span className="absolute inset-0 overflow-hidden" style={{ width: "70%" }}>
+                  <Star className="w-5 h-5 fill-primary text-primary" />
+                </span>
+              </span>
             </div>
-            <span className="text-sm text-muted-foreground">Calificación 5.0</span>
+            <span className="text-sm text-muted-foreground">Calificación 4.7</span>
           </div>
 
           <div className="hidden md:block w-px h-8 bg-border" />
