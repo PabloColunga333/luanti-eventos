@@ -27,7 +27,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
           >
             <Image
               src={item.thumbnail || "/placeholder.svg"}
-              alt={item.title}
+              alt="Foto de evento"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -37,7 +37,6 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                   <Play className="w-8 h-8 text-primary-foreground ml-1" />
                 </div>
               )}
-              {item.type === "image" && <span className="text-foreground font-medium">{item.title}</span>}
             </div>
             {item.type === "video" && (
               <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-background/80 flex items-center justify-center">
@@ -77,7 +76,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 <div className="relative aspect-video rounded-2xl overflow-hidden">
                   <Image
                     src={selectedItem.url || "/placeholder.svg"}
-                    alt={selectedItem.title}
+                    alt="Foto de evento"
                     fill
                     className="object-contain"
                   />
@@ -86,14 +85,13 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 <div className="relative aspect-video rounded-2xl overflow-hidden bg-card">
                   <iframe
                     src={selectedItem.url}
-                    title={selectedItem.title}
+                    title="Video del evento"
                     className="absolute inset-0 w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
                 </div>
               )}
-              <p className="text-center mt-4 text-lg font-medium">{selectedItem.title}</p>
             </motion.div>
           </motion.div>
         )}

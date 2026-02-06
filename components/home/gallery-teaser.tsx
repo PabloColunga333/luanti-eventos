@@ -36,7 +36,7 @@ export function GalleryTeaser() {
             >
               <Image
                 src={item.thumbnail || "/placeholder.svg"}
-                alt={item.title}
+                alt="Foto de evento"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
               />

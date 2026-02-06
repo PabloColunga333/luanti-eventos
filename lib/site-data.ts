@@ -387,14 +387,6 @@ export interface GalleryItem {
 
 export const galleryItems: GalleryItem[] = [
   {
-    id: "1",
-    type: "image",
-    category: "social",
-    url: "/galeria/WhatsApp%20Image%202026-02-05%20at%203.40.34%20PM.jpg",
-    thumbnail: "/galeria/WhatsApp%20Image%202026-02-05%20at%203.40.34%20PM.jpg",
-    title: "Evento Social 1",
-  },
-  {
     id: "2",
     type: "image",
     category: "social",
