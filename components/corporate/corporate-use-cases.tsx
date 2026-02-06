@@ -101,8 +101,8 @@ export function CorporateUseCases() {
                 )
               })}
             </CarouselContent>
-            <CarouselPrevious className="-left-4" />
-            <CarouselNext className="-right-4" />
+            <CarouselPrevious className="-left-6 md:-left-10 bg-background/90 border border-border/60 shadow-lg shadow-black/10 hover:bg-primary hover:text-primary-foreground hover:border-primary/60" />
+            <CarouselNext className="-right-6 md:-right-10 bg-background/90 border border-border/60 shadow-lg shadow-black/10 hover:bg-primary hover:text-primary-foreground hover:border-primary/60" />
           </Carousel>
         </div>
       </div>
