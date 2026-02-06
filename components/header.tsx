@@ -3,7 +3,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, MessageCircle, Sparkles } from "lucide-react"
+import { Menu, X, Sparkles } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-data"
 
@@ -55,7 +56,7 @@ export function Header() {
               className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl"
             >
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-4 h-4 mr-2" />
+                <FaWhatsapp className="w-4 h-4 mr-2" />
                 Cotiza por WhatsApp
               </a>
             </Button>
@@ -94,7 +95,7 @@ export function Header() {
               ))}
               <Button asChild className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-4 h-4 mr-2" />
+                  <FaWhatsapp className="w-4 h-4 mr-2" />
                   Cotiza por WhatsApp
                 </a>
               </Button>

@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageCircle, ArrowRight, Play } from "lucide-react"
+import { ArrowRight, Play } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-data"
 import Link from "next/link"
@@ -45,7 +46,7 @@ export function HeroSection() {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
               >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                  <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   <span className="whitespace-nowrap">Consultar fecha</span>
                 </a>
               </Button>

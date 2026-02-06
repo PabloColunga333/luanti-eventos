@@ -3,7 +3,8 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 import { siteConfig } from "@/lib/site-data"
 import Image from "next/image"
 import Link from "next/link"
@@ -128,7 +129,7 @@ export function ServicesPreview() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle className="w-4 h-4 mr-2" />
+                <FaWhatsapp className="w-4 h-4 mr-2" />
                 Cotizar {serviceImages[currentIndex].name}
               </a>
             </Button>
@@ -168,7 +169,7 @@ export function ServicesPreview() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <MessageCircle className="w-4 h-4 mr-2" />
+                        <FaWhatsapp className="w-4 h-4 mr-2" />
                         Cotizar
                       </a>
                     </Button>

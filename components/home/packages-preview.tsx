@@ -3,7 +3,8 @@
 import { motion } from "framer-motion"
 import { siteConfig } from "@/lib/site-data"
 import { Button } from "@/components/ui/button"
-import { MessageCircle, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -71,7 +72,7 @@ export function PackagesPreview() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <MessageCircle className="w-5 h-5 mr-2" />
+                      <FaWhatsapp className="w-5 h-5 mr-2" />
                       Cotizar Paquete
                     </a>
                   </Button>
@@ -88,7 +89,7 @@ export function PackagesPreview() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle className="w-4 h-4 mr-2" />
+                    <FaWhatsapp className="w-4 h-4 mr-2" />
                     Cotizar Paquete
                   </a>
                 </Button>

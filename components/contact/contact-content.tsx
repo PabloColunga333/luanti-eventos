@@ -1,13 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageCircle, Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 import { ContactForm } from "@/components/contact-form"
 import { siteConfig } from "@/lib/site-data"
 
 const contactCards = [
   {
-    icon: MessageCircle,
+    icon: FaWhatsapp,
     title: "WhatsApp",
     description: "Respuesta inmediata",
     value: "Enviar mensaje",

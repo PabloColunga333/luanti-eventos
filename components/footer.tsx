@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Sparkles, Instagram, Facebook, MessageCircle, Mail, Phone, MapPin } from "lucide-react"
+import { Sparkles, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 import { siteConfig } from "@/lib/site-data"
 
 const footerLinks = {
@@ -62,7 +63,7 @@ export function Footer() {
                 className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-5 h-5" />
+                <FaWhatsapp className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -106,7 +107,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-primary" />
+                  <FaWhatsapp className="w-4 h-4 text-primary" />
                   WhatsApp
                 </a>
               </li>
