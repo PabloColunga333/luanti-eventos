@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import { FaWhatsapp } from "react-icons/fa"
+import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-data"
 import Link from "next/link"
@@ -45,7 +45,7 @@ export function CTASection({
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp className="w-5 h-5 mr-2" />
+                  <SiWhatsapp className="w-5 h-5 mr-2" />
                   {primaryCta}
                 </a>
               </Button>
@@ -95,7 +95,7 @@ export function CTASection({
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl text-lg px-8 py-6"
             >
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp className="w-5 h-5 mr-2" />
+                <SiWhatsapp className="w-5 h-5 mr-2" />
                 {primaryCta}
               </a>
             </Button>

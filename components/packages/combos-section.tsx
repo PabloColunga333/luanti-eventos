@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FaWhatsapp } from "react-icons/fa"
+import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 import { combos, siteConfig } from "@/lib/site-data"
 
@@ -57,7 +57,7 @@ export function CombosSection() {
                   className="w-full rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    <FaWhatsapp className="w-4 h-4 mr-2" />
+                    <SiWhatsapp className="w-4 h-4 mr-2" />
                     Cotizar Paquete
                   </a>
                 </Button>

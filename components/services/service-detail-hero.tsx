@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ArrowLeft, Sparkles, Video, Phone } from "lucide-react"
-import { FaWhatsapp } from "react-icons/fa"
+import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 import { siteConfig, type Service } from "@/lib/site-data"
 import Link from "next/link"
@@ -61,7 +61,7 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl text-lg px-8"
             >
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp className="w-5 h-5 mr-2" />
+                <SiWhatsapp className="w-5 h-5 mr-2" />
                 Cotizar ahora
               </a>
             </Button>

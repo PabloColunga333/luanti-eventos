@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FaWhatsapp } from "react-icons/fa"
+import { SiWhatsapp } from "react-icons/si"
 import { siteConfig } from "@/lib/site-data"
 
 export function WhatsAppFloatingButton() {
@@ -20,7 +20,7 @@ export function WhatsAppFloatingButton() {
       whileTap={{ scale: 0.95 }}
       aria-label="Contactar por WhatsApp"
     >
-      <FaWhatsapp className="w-7 h-7 text-white" />
+      <SiWhatsapp className="w-7 h-7 text-white" />
       <span className="sr-only">Contactar por WhatsApp</span>
     </motion.a>
   )

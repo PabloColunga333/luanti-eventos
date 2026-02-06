@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
-import { FaWhatsapp } from "react-icons/fa"
+import { SiWhatsapp } from "react-icons/si"
 import { ContactForm } from "@/components/contact-form"
 import { siteConfig } from "@/lib/site-data"
 
 const contactCards = [
   {
-    icon: FaWhatsapp,
+    icon: SiWhatsapp,
     title: "WhatsApp",
     description: "Respuesta inmediata",
     value: "Enviar mensaje",

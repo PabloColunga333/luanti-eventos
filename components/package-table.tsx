@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Check, X } from "lucide-react"
-import { FaWhatsapp } from "react-icons/fa"
+import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 import { packages, siteConfig } from "@/lib/site-data"
 
@@ -73,7 +73,7 @@ export function PackageTable() {
                 }`}
               >
                 <a href={getWhatsAppUrl(pkg.name)} target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp className="w-4 h-4 mr-2" />
+                  <SiWhatsapp className="w-4 h-4 mr-2" />
                   {pkg.cta}
                 </a>
               </Button>

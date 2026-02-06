@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { FaWhatsapp } from "react-icons/fa"
+import { SiWhatsapp } from "react-icons/si"
 import { siteConfig } from "@/lib/site-data"
 import Image from "next/image"
 import Link from "next/link"
@@ -129,7 +129,7 @@ export function ServicesPreview() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaWhatsapp className="w-4 h-4 mr-2" />
+                <SiWhatsapp className="w-4 h-4 mr-2" />
                 Cotizar {serviceImages[currentIndex].name}
               </a>
             </Button>
@@ -169,7 +169,7 @@ export function ServicesPreview() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaWhatsapp className="w-4 h-4 mr-2" />
+                        <SiWhatsapp className="w-4 h-4 mr-2" />
                         Cotizar
                       </a>
                     </Button>
