@@ -155,37 +155,31 @@ export function ServicesPreview() {
                     alt={service.alt}
                     width={800}
                     height={800}
-                    className="object-contain w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="object-contain w-full h-auto"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                  <div className="flex flex-col gap-3">
-                    <Button
-                      asChild
-                      className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground"
-                    >
-                      <a
-                        href={getWhatsAppUrl(service.name)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <SiWhatsapp className="w-4 h-4 mr-2" />
-                        Cotizar
-                      </a>
-                    </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="rounded-xl bg-transparent border-white text-white hover:bg-white/20 hover:text-white"
-                    >
-                      <Link href={`/servicios/${service.slug}`}>
-                        Ver detalles
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
+              </div>
+              <div className="mt-4 flex flex-col gap-2">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full rounded-xl border-primary text-primary hover:bg-primary/10"
+                >
+                  <Link href={`/servicios/${service.slug}`}>
+                    Ver detalles
+                  </Link>
+                </Button>
+                <Button asChild className="w-full rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <a
+                    href={getWhatsAppUrl(service.name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SiWhatsapp className="w-4 h-4 mr-2" />
+                    Cotizar
+                  </a>
+                </Button>
               </div>
             </motion.div>
           ))}

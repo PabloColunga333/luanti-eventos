@@ -20,6 +20,7 @@ export interface Service {
   name: string
   slug: string
   shortDescription: string
+  description: string
   heroTitle: string
   heroSubtitle: string
   icon: string
@@ -41,6 +42,8 @@ export const services: Service[] = [
     slug: "espejo-magico",
     shortDescription:
       "Experiencia interactiva elegante ideal para bodas, XV años, cumpleaños y eventos corporativos.",
+    description:
+      "Cabina interactiva de cuerpo completo con animaciones y fotos instantáneas. Tus invitados posan frente al espejo, reciben indicaciones en pantalla y se llevan impresiones al momento.",
     heroTitle: "Espejo Mágico",
     heroSubtitle:
       "Experiencia interactiva elegante ideal para bodas, XV años, cumpleaños y eventos corporativos.",
@@ -82,6 +85,8 @@ export const services: Service[] = [
     slug: "cabina-360",
     shortDescription:
       "La experiencia más moderna para crear videos dinámicos y compartirlos al instante.",
+    description:
+      "Plataforma giratoria que graba videos en cámara lenta con efectos y música. Ideal para crear clips impactantes y compartirlos en redes al instante.",
     heroTitle: "Cabina 360°",
     heroSubtitle:
       "La experiencia más moderna para crear videos dinámicos y compartirlos al instante.",
@@ -123,6 +128,8 @@ export const services: Service[] = [
     slug: "telefono-dedicatorias",
     shortDescription:
       "Un recuerdo emotivo donde tus invitados dejan mensajes de voz únicos.",
+    description:
+      "Teléfono vintage para que tus invitados dejen mensajes de voz emotivos. Al finalizar, recibes todos los audios en un enlace para conservarlos siempre.",
     heroTitle: "Teléfono de Dedicatorias",
     heroSubtitle:
       "Un recuerdo emotivo donde tus invitados dejan mensajes de voz únicos que atesorarás por siempre.",
