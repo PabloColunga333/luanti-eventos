@@ -60,6 +60,7 @@ export function CorporateHero() {
                 alt="Espejo Mágico Luanti en evento corporativo con alfombra roja"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Overlay gradient */}

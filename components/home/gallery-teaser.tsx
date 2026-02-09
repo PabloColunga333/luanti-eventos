@@ -39,6 +39,7 @@ export function GalleryTeaser() {
                 alt="Foto de evento"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
               />
               <div className="absolute inset-0 bg-background/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 {item.type === "video" && (

@@ -77,6 +77,7 @@ export function ServicesPreview() {
                   width={800}
                   height={800}
                   className="object-contain w-full h-auto"
+                  sizes="100vw"
                 />
               </motion.div>
             </AnimatePresence>
@@ -155,6 +156,7 @@ export function ServicesPreview() {
                     width={800}
                     height={800}
                     className="object-contain w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
                 {/* Hover Overlay */}

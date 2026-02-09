@@ -47,6 +47,7 @@ export function ServicesList() {
                       width={800}
                       height={600}
                       className="object-contain w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>

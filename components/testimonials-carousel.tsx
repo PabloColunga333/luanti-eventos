@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { testimonials } from "@/lib/site-data"
@@ -9,14 +9,15 @@ import { testimonials } from "@/lib/site-data"
 export function TestimonialsCarousel() {
   const [current, setCurrent] = useState(0)
   const [autoPlay, setAutoPlay] = useState(true)
+  const reduceMotion = useReducedMotion()
 
   useEffect(() => {
-    if (!autoPlay) return
+    if (!autoPlay || reduceMotion) return
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length)
     }, 5000)
     return () => clearInterval(timer)
-  }, [autoPlay])
+  }, [autoPlay, reduceMotion])
 
   const next = () => {
     setAutoPlay(false)
@@ -42,10 +43,10 @@ export function TestimonialsCarousel() {
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0, x: 50 }}
+              initial={reduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
+              exit={reduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+              transition={reduceMotion ? { duration: 0 } : { duration: 0.3 }}
               className="bg-card rounded-2xl border border-border p-8 md:p-12"
             >
               <Quote className="w-12 h-12 text-primary/30 mb-6" />

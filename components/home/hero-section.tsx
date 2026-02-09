@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import { ArrowRight, Play } from "lucide-react"
 import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
@@ -9,6 +9,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export function HeroSection() {
+  const reduceMotion = useReducedMotion()
   const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent("Hola, quisiera consultar disponibilidad para mi evento")}`
 
   return (
@@ -17,16 +18,16 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card/50" />
 
       {/* Decorative elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-primary/10 rounded-full blur-[72px] sm:blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-64 h-64 sm:w-80 sm:h-80 bg-secondary/10 rounded-full blur-[60px] sm:blur-3xl" />
 
       <div className="container mx-auto px-4 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={reduceMotion ? { duration: 0 } : { duration: 0.6 }}
             className="text-center lg:text-left"
           >
             
@@ -77,9 +78,9 @@ export function HeroSection() {
 
           {/* Hero Image / Video placeholder */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={reduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={reduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.2 }}
             className="relative"
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-2xl shadow-primary/10">
@@ -89,6 +90,7 @@ export function HeroSection() {
                 fill
                 className="object-cover object-center-top"
                 style={{ objectPosition: '50% 35%' }}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Play button overlay for video */}
@@ -102,9 +104,9 @@ export function HeroSection() {
 
             {/* Floating badge */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={reduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={reduceMotion ? { duration: 0 } : { delay: 0.6 }}
               className="absolute -left-4 bottom-8 bg-card border border-border rounded-2xl p-4 shadow-lg hidden md:block"
             >
               <p className="text-sm text-muted-foreground">Entrega instantánea</p>
@@ -113,9 +115,9 @@ export function HeroSection() {
 
             {/* Floating badge 2 */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={reduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
+              transition={reduceMotion ? { duration: 0 } : { delay: 0.8 }}
               className="absolute -right-4 top-8 bg-card border border-border rounded-2xl p-4 shadow-lg hidden md:block"
             >
               <p className="text-2xl font-bold text-primary">100%</p>
