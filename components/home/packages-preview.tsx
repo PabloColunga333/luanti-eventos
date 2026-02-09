@@ -10,13 +10,13 @@ import Image from "next/image"
 
 const comboImages = [
   {
-    src: "/packages/combo-espejo-cabina-480.webp",
+    src: "/packages/combo-espejo-cabina-640.webp",
     alt: "Paquete Espejo Mágico + Cabina 360 - $10,000 MXN",
     name: "Espejo Mágico + Cabina 360",
     price: "$10,000 MXN",
   },
   {
-    src: "/packages/combo-espejo-telefono-480.webp",
+    src: "/packages/combo-espejo-telefono-640.webp",
     alt: "Paquete Espejo Mágico + Teléfono de Dedicatorias - $9,000 MXN",
     name: "Espejo Mágico + Teléfono de Dedicatorias",
     price: "$9,000 MXN",
