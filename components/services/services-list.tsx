@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Check, Camera, Film, PhoneCall } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { services, siteConfig } from "@/lib/site-data"
+import { services } from "@/lib/site-data"
 
 const iconMap = {
   sparkles: Camera,
@@ -27,7 +27,7 @@ export function ServicesList() {
           {services.map((service, index) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap] || Sparkles
             const isReversed = index % 2 === 1
-            const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hola, me interesa cotizar ${service.name}`)}`
+            const contactFormUrl = "/contacto#formulario"
 
             return (
               <motion.div
@@ -77,9 +77,9 @@ export function ServicesList() {
                   {/* CTAs */}
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl">
-                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      <Link href={contactFormUrl}>
                         Cotizar {service.name}
-                      </a>
+                      </Link>
                     </Button>
                     <Button
                       asChild

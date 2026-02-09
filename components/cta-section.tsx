@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/lib/site-data"
 import Link from "next/link"
 
 interface CTASectionProps {
@@ -26,9 +25,7 @@ export function CTASection({
   secondaryHref = "/paquetes",
   variant = "default",
 }: CTASectionProps) {
-  const whatsappUrl =
-    primaryHref ||
-    `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent("Hola, me interesa cotizar para mi evento")}`
+  const primaryUrl = primaryHref || "/contacto#formulario"
 
   if (variant === "compact") {
     return (
@@ -44,10 +41,10 @@ export function CTASection({
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">{subtitle}</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <Link href={primaryUrl}>
                   <SiWhatsapp className="w-5 h-5 mr-2" />
                   {primaryCta}
-                </a>
+                </Link>
               </Button>
               {secondaryCta && (
                 <Button
@@ -94,10 +91,10 @@ export function CTASection({
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl text-lg px-8 py-6"
             >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={primaryUrl}>
                 <SiWhatsapp className="w-5 h-5 mr-2" />
                 {primaryCta}
-              </a>
+              </Link>
             </Button>
               {secondaryCta && (
                 <Button

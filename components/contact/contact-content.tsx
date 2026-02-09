@@ -12,7 +12,7 @@ const contactCards = [
     title: "WhatsApp",
     description: "Respuesta inmediata",
     value: "Enviar mensaje",
-    href: `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent("Hola, me interesa cotizar para mi evento")}`,
+    href: "/contacto#formulario",
     highlight: true,
   },
   {
@@ -101,7 +101,7 @@ export function ContactContent() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3" id="formulario">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

@@ -4,13 +4,12 @@ import { motion, useReducedMotion } from "framer-motion"
 import { ArrowRight, Play } from "lucide-react"
 import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/lib/site-data"
 import Link from "next/link"
 import Image from "next/image"
 
 export function HeroSection() {
   const reduceMotion = useReducedMotion()
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent("Hola, quisiera consultar disponibilidad para mi evento")}`
+  const contactFormUrl = "/contacto#formulario"
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -46,10 +45,10 @@ export function HeroSection() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
               >
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <Link href={contactFormUrl}>
                   <SiWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   <span className="whitespace-nowrap">Consultar fecha</span>
-                </a>
+                </Link>
               </Button>
               <Button
                 asChild

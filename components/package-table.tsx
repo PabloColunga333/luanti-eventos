@@ -4,11 +4,11 @@ import { motion } from "framer-motion"
 import { Check, X } from "lucide-react"
 import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
-import { packages, siteConfig } from "@/lib/site-data"
+import { packages } from "@/lib/site-data"
+import Link from "next/link"
 
 export function PackageTable() {
-  const getWhatsAppUrl = (packageName: string) =>
-    `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hola, me interesa cotizar el paquete ${packageName}`)}`
+  const contactFormUrl = "/contacto#formulario"
 
   return (
     <div className="w-full">
@@ -72,10 +72,10 @@ export function PackageTable() {
                     : "bg-muted hover:bg-muted/80 text-foreground"
                 }`}
               >
-                <a href={getWhatsAppUrl(pkg.name)} target="_blank" rel="noopener noreferrer">
+                <Link href={contactFormUrl}>
                   <SiWhatsapp className="w-4 h-4 mr-2" />
                   {pkg.cta}
-                </a>
+                </Link>
               </Button>
             </div>
           </motion.div>

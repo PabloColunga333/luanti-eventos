@@ -4,8 +4,6 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { SiWhatsapp } from "react-icons/si"
-import { siteConfig } from "@/lib/site-data"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -40,9 +38,6 @@ export function ServicesPreview() {
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + serviceImages.length) % serviceImages.length)
   }
-
-  const getWhatsAppUrl = (serviceName: string) =>
-    `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hola, me interesa cotizar ${serviceName}`)}`
 
   return (
     <section className="py-16 md:py-24">

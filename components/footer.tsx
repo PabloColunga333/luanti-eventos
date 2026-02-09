@@ -19,7 +19,7 @@ const footerLinks = {
 }
 
 export function Footer() {
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent("Hola, me interesa información sobre sus servicios")}`
+  const contactFormUrl = "/contacto#formulario"
 
   return (
     <footer className="bg-card border-t border-border">
@@ -59,9 +59,7 @@ export function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={contactFormUrl}
                 className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
                 aria-label="WhatsApp"
               >
@@ -104,9 +102,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={contactFormUrl}
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <SiWhatsapp className="w-4 h-4 text-primary" />

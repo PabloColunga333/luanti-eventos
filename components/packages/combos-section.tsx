@@ -3,9 +3,11 @@
 import { motion } from "framer-motion"
 import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
-import { combos, siteConfig } from "@/lib/site-data"
+import { combos } from "@/lib/site-data"
+import Link from "next/link"
 
 export function CombosSection() {
+  const contactFormUrl = "/contacto#formulario"
   return (
     <section className="py-16 md:py-24 bg-card/50">
       <div className="container mx-auto px-4">
@@ -22,10 +24,7 @@ export function CombosSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {combos.map((combo, index) => {
-            const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hola, me interesa cotizar el paquete ${combo.name}`)}`
-
-            return (
+          {combos.map((combo, index) => (
               <motion.div
                 key={combo.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -56,14 +55,13 @@ export function CombosSection() {
                   asChild
                   className="w-full rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  <Link href={contactFormUrl}>
                     <SiWhatsapp className="w-4 h-4 mr-2" />
                     Cotizar Paquete
-                  </a>
+                  </Link>
                 </Button>
               </motion.div>
-            )
-          })}
+          ))}
         </div>
       </div>
     </section>

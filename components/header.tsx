@@ -4,9 +4,8 @@ import { useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Sparkles } from "lucide-react"
-import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/lib/site-data"
+import { SiWhatsapp } from "react-icons/si"
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -21,7 +20,7 @@ const navLinks = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent("Hola, me interesa cotizar para mi evento")}`
+  const contactFormUrl = "/contacto#formulario"
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
@@ -57,10 +56,10 @@ export function Header() {
               asChild
               className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl"
             >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={contactFormUrl}>
                 <SiWhatsapp className="w-4 h-4 mr-2" />
                 Cotiza por WhatsApp
-              </a>
+              </Link>
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -96,10 +95,10 @@ export function Header() {
                 </Link>
               ))}
               <Button asChild className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <Link href={contactFormUrl}>
                   <SiWhatsapp className="w-4 h-4 mr-2" />
                   Cotiza por WhatsApp
-                </a>
+                </Link>
               </Button>
             </nav>
           </motion.div>

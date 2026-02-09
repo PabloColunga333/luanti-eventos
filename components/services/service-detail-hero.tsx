@@ -5,7 +5,7 @@ import Image from "next/image"
 import { ArrowLeft, Sparkles, Video, Phone } from "lucide-react"
 import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
-import { siteConfig, type Service } from "@/lib/site-data"
+import { type Service } from "@/lib/site-data"
 import Link from "next/link"
 
 const iconMap = {
@@ -26,7 +26,7 @@ interface ServiceDetailHeroProps {
 
 export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
   const Icon = iconMap[service.icon as keyof typeof iconMap] || Sparkles
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hola, me interesa cotizar ${service.name}`)}`
+  const contactFormUrl = "/contacto#formulario"
 
   return (
     <section className="pt-24 pb-8 md:pt-32 md:pb-12 relative overflow-hidden">
@@ -60,10 +60,10 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl text-lg px-8"
             >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={contactFormUrl}>
                 <SiWhatsapp className="w-5 h-5 mr-2" />
                 Cotizar ahora
-              </a>
+              </Link>
             </Button>
           </motion.div>
 

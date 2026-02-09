@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { siteConfig } from "@/lib/site-data"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { SiWhatsapp } from "react-icons/si"
@@ -24,8 +23,7 @@ const comboImages = [
 ]
 
 export function PackagesPreview() {
-  const getWhatsAppUrl = (packageName: string) =>
-    `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hola, me interesa cotizar el paquete ${packageName}`)}`
+  const contactFormUrl = "/contacto#formulario"
 
   return (
     <section className="py-16 md:py-24 bg-card/50">
@@ -68,14 +66,10 @@ export function PackagesPreview() {
                     size="lg"
                     className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
-                    <a
-                      href={getWhatsAppUrl(combo.name)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <Link href={contactFormUrl}>
                       <SiWhatsapp className="w-5 h-5 mr-2" />
                       Cotizar Paquete
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -85,14 +79,10 @@ export function PackagesPreview() {
                   asChild
                   className="w-full rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
-                  <a
-                    href={getWhatsAppUrl(combo.name)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href={contactFormUrl}>
                     <SiWhatsapp className="w-4 h-4 mr-2" />
                     Cotizar Paquete
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </motion.div>
