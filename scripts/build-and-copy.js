@@ -43,18 +43,38 @@ execSync('next build', { stdio: 'inherit' });
 console.log('📁 Cleaning public directory...');
 const publicDir = path.join(__dirname, '..', 'public');
 
-// Eliminar todo en public/ excepto directorios específicos de assets
+const allowedDirs = new Set([
+  'gallery',
+  'images',
+  'logos',
+  'packages',
+  'services',
+  'galeria',
+  'corporativo',
+]);
+
+const allowedFiles = new Set([
+  'desktop.ini',
+  '_headers',
+  '_redirects',
+  'favicon.ico',
+  'favicon-48x48.png',
+  'apple-touch-icon.png',
+  'site.webmanifest',
+  'robots.txt',
+  'sitemap.xml',
+]);
+
+// Eliminar todo en public/ excepto directorios y archivos permitidos
 fs.readdirSync(publicDir).forEach(file => {
   const filePath = path.join(publicDir, file);
   const stat = fs.lstatSync(filePath);
   
-  // Mantener solo directorios de assets
   if (stat.isDirectory()) {
-    if (!['gallery', 'images', 'logos', 'packages', 'services'].includes(file)) {
+    if (!allowedDirs.has(file)) {
       removeDir(filePath);
     }
-  } else if (file !== 'desktop.ini') {
-    // Borrar archivos individuales excepto desktop.ini
+  } else if (!allowedFiles.has(file)) {
     fs.unlinkSync(filePath);
   }
 });

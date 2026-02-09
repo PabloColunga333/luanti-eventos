@@ -30,7 +30,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img 
-              src="/luanti-logo.webp" 
+              src="/luanti-logo-160.webp" 
               alt="Luanti Eventos" 
               className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105 brightness-0 invert"
             />

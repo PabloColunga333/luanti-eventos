@@ -29,7 +29,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <img 
-                src="/luanti-logo.webp" 
+                src="/luanti-logo-160.webp" 
                 alt="Luanti Eventos" 
                 className="h-12 w-auto object-contain brightness-0 invert"
               />
