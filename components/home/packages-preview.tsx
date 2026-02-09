@@ -1,6 +1,3 @@
-"use client"
-
-import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { SiWhatsapp } from "react-icons/si"
@@ -26,31 +23,19 @@ export function PackagesPreview() {
   const contactFormUrl = "/contacto#formulario"
 
   return (
-    <section className="py-16 md:py-24 bg-card/50">
+    <section className="py-16 md:py-24 bg-card/50 content-visibility-auto">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Combina y Ahorra</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Obtén el mejor precio combinando nuestros servicios. Aprovecha nuestras promociones especiales.
           </p>
-        </motion.div>
+        </div>
 
         {/* Combo Images Grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
-          {comboImages.map((combo, index) => (
-            <motion.div
-              key={combo.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative"
-            >
+          {comboImages.map((combo) => (
+            <div key={combo.name} className="group relative">
               <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg border border-primary/20">
                 <Image
                   src={combo.src || "/placeholder.svg"}
@@ -85,21 +70,16 @@ export function PackagesPreview() {
                   </Link>
                 </Button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <div className="text-center">
           <Link href="/paquetes" className="inline-flex items-center text-primary hover:underline font-medium">
             Ver todos los paquetes
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

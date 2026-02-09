@@ -131,3 +131,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--muted-foreground);
 }
+
+/* Perf: evita trabajo de render fuera de pantalla */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px 600px;
+}

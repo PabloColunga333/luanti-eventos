@@ -1,18 +1,10 @@
-"use client"
-
-import { motion } from "framer-motion"
 import { Star } from "lucide-react"
 
 export function SocialProofStrip() {
   return (
     <section className="py-8 border-y border-border bg-card/50">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center"
-        >
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center">
           {/* Stars */}
           <div className="flex items-center gap-2">
             <div className="flex gap-0.5">
@@ -74,7 +66,7 @@ export function SocialProofStrip() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

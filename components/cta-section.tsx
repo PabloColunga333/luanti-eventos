@@ -29,7 +29,7 @@ export function CTASection({
 
   if (variant === "compact") {
     return (
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 content-visibility-auto">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export function CTASection({
   }
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden content-visibility-auto">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 

@@ -30,7 +30,7 @@ export function TestimonialsCarousel() {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-card/50">
+    <section className="py-16 md:py-24 bg-card/50 content-visibility-auto">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Lo que dicen nuestros clientes</h2>
