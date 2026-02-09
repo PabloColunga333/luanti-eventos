@@ -44,15 +44,33 @@ export function SocialProofStrip() {
             <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
               {/* ICEE Logo */}
               <div className="px-3 py-2 sm:px-4 sm:py-3 bg-background rounded-xl shadow-md border border-border/60 flex items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
-                <img src="/logos/icee-logo.svg" alt="ICEE" className="h-6 sm:h-8 w-auto object-contain" />
+                <img
+                  src="/logos/icee-logo.svg"
+                  alt="ICEE"
+                  width={80}
+                  height={32}
+                  className="h-6 sm:h-8 w-auto object-contain"
+                />
               </div>
               {/* DHL Logo */}
               <div className="px-3 py-2 sm:px-4 sm:py-3 bg-background rounded-xl shadow-md border border-border/60 flex items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
-                <img src="/logos/dhl-logo.svg" alt="DHL" className="h-6 sm:h-8 w-auto object-contain" />
+                <img
+                  src="/logos/dhl-logo.svg"
+                  alt="DHL"
+                  width={80}
+                  height={32}
+                  className="h-6 sm:h-8 w-auto object-contain"
+                />
               </div>
               {/* BIMBO Logo */}
               <div className="px-3 py-2 sm:px-4 sm:py-3 bg-background rounded-xl shadow-md border border-border/60 flex items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
-                <img src="/logos/bimbo-logo.svg" alt="Grupo BIMBO" className="h-6 sm:h-8 w-auto object-contain" />
+                <img
+                  src="/logos/bimbo-logo.svg"
+                  alt="Grupo BIMBO"
+                  width={80}
+                  height={32}
+                  className="h-6 sm:h-8 w-auto object-contain"
+                />
               </div>
             </div>
           </div>
