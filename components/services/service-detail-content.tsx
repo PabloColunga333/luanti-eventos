@@ -19,10 +19,13 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-card rounded-2xl border border-border p-6 md:p-8"
+            className="relative overflow-hidden rounded-2xl border border-primary/30 bg-primary/5 p-6 md:p-8"
           >
-            <h2 className="font-serif text-2xl font-semibold mb-4">¿Qué es?</h2>
-            <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent" />
+            <h2 className="relative font-serif text-2xl md:text-3xl font-semibold mb-4 text-foreground">¿Qué es?</h2>
+            <p className="relative text-base md:text-lg text-foreground/80 leading-relaxed">
+              {service.description}
+            </p>
           </motion.div>
 
           {/* What's Included */}
