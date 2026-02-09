@@ -38,6 +38,9 @@ function copyDir(src, dest) {
 }
 
 console.log('🔨 Building Next.js project...');
+// Evita conflicto con /_next cuando existe public/_next de builds previos
+const publicNextDir = path.join(__dirname, '..', 'public', '_next');
+removeDir(publicNextDir);
 execSync('next build', { stdio: 'inherit' });
 
 console.log('📁 Cleaning public directory...');

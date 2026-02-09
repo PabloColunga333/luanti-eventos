@@ -1,14 +1,10 @@
-"use client"
-
-import { motion, useReducedMotion } from "framer-motion"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { SiWhatsapp } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 
 export function HeroSection() {
-  const reduceMotion = useReducedMotion()
   const contactFormUrl = "/contacto#formulario"
 
   return (
@@ -23,12 +19,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <motion.div
-            initial={reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={reduceMotion ? { duration: 0 } : { duration: 0.6 }}
-            className="text-center lg:text-left"
-          >
+          <div className="text-center lg:text-left">
             
 
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 text-balance leading-tight">
@@ -73,15 +64,11 @@ export function HeroSection() {
                 </Link>
               </Button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Hero Image / Video placeholder */}
-          <motion.div
-            initial={reduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={reduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
+          {/* Render delay: sin animación en la imagen LCP */}
+          <div className="relative">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-2xl shadow-primary/10">
               <Image
                 src="/images/hero-espejo-magico-720.webp"
@@ -90,7 +77,8 @@ export function HeroSection() {
                 className="object-cover object-center-top"
                 style={{ objectPosition: '50% 35%' }}
                 fetchPriority="high"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                // LCP: evitar imagen más grande de lo necesario en móvil
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 50vw"
                 priority
               />
               {/* Play button overlay for video */}
@@ -103,27 +91,17 @@ export function HeroSection() {
             </div>
 
             {/* Floating badge */}
-            <motion.div
-              initial={reduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={reduceMotion ? { duration: 0 } : { delay: 0.6 }}
-              className="absolute -left-4 bottom-8 bg-card border border-border rounded-2xl p-4 shadow-lg hidden md:block"
-            >
+            <div className="absolute -left-4 bottom-8 bg-card border border-border rounded-2xl p-4 shadow-lg hidden md:block">
               <p className="text-sm text-muted-foreground">Entrega instantánea</p>
               <p className="font-semibold text-foreground">Fotos y videos por QR</p>
-            </motion.div>
+            </div>
 
             {/* Floating badge 2 */}
-            <motion.div
-              initial={reduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={reduceMotion ? { duration: 0 } : { delay: 0.8 }}
-              className="absolute -right-4 top-8 bg-card border border-border rounded-2xl p-4 shadow-lg hidden md:block"
-            >
+            <div className="absolute -right-4 top-8 bg-card border border-border rounded-2xl p-4 shadow-lg hidden md:block">
               <p className="text-2xl font-bold text-primary">100%</p>
               <p className="text-sm text-muted-foreground">Puntuales</p>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
