@@ -85,7 +85,7 @@ export function HeroSection() {
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-2xl shadow-primary/10">
               <Image
-                src="/images/hero-espejo-magico-700.webp"
+                src="/images/hero-espejo-magico-520.webp"
                 alt="Espejo Mágico en evento"
                 fill
                 className="object-cover object-center-top"
