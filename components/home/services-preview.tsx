@@ -114,7 +114,7 @@ export function ServicesPreview() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="mt-6 flex flex-col gap-3">
+          <div className="mt-6">
             <Button
               asChild
               variant="outline"
@@ -123,16 +123,6 @@ export function ServicesPreview() {
               <Link href={`/servicios/${serviceImages[currentIndex].slug}`}>
                 Ver detalles
               </Link>
-            </Button>
-            <Button asChild className="w-full rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground">
-              <a
-                href={getWhatsAppUrl(serviceImages[currentIndex].name)}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SiWhatsapp className="w-4 h-4 mr-2" />
-                Cotizar {serviceImages[currentIndex].name}
-              </a>
             </Button>
           </div>
         </div>
@@ -160,7 +150,7 @@ export function ServicesPreview() {
                   />
                 </div>
               </div>
-              <div className="mt-4 flex flex-col gap-2">
+              <div className="mt-4">
                 <Button
                   asChild
                   variant="outline"
@@ -169,16 +159,6 @@ export function ServicesPreview() {
                   <Link href={`/servicios/${service.slug}`}>
                     Ver detalles
                   </Link>
-                </Button>
-                <Button asChild className="w-full rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <a
-                    href={getWhatsAppUrl(service.name)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <SiWhatsapp className="w-4 h-4 mr-2" />
-                    Cotizar
-                  </a>
                 </Button>
               </div>
             </motion.div>
