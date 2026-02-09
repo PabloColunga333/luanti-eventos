@@ -85,11 +85,12 @@ export function HeroSection() {
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-2xl shadow-primary/10">
               <Image
-                src="/images/hero-espejo-magico.jpg"
+                src="/images/hero-espejo-magico.webp"
                 alt="Espejo Mágico en evento"
                 fill
                 className="object-cover object-center-top"
                 style={{ objectPosition: '50% 35%' }}
+                fetchPriority="high"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

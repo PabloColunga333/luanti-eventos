@@ -1,9 +1,11 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import { whyLuanti } from "@/lib/site-data"
 
 export function WhyLuanti() {
+  const reduceMotion = useReducedMotion()
+
   return (
     <section className="py-20 md:py-32 relative overflow-hidden">
       {/* Fondo con patrón y gradientes */}
@@ -11,21 +13,29 @@ export function WhyLuanti() {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
       
       {/* Orbes decorativos animados */}
-      <motion.div 
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.1, 0.2, 0.1]
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-32 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px]" 
+      <motion.div
+        animate={
+          reduceMotion
+            ? undefined
+            : {
+                scale: [1, 1.2, 1],
+                opacity: [0.1, 0.2, 0.1],
+              }
+        }
+        transition={reduceMotion ? undefined : { duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -top-24 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-primary/20 rounded-full blur-[72px] sm:blur-[100px]"
       />
-      <motion.div 
-        animate={{ 
-          scale: [1.2, 1, 1.2],
-          opacity: [0.1, 0.15, 0.1]
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-32 left-1/4 w-80 h-80 bg-primary/15 rounded-full blur-[80px]" 
+      <motion.div
+        animate={
+          reduceMotion
+            ? undefined
+            : {
+                scale: [1.2, 1, 1.2],
+                opacity: [0.1, 0.15, 0.1],
+              }
+        }
+        transition={reduceMotion ? undefined : { duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -bottom-24 left-1/4 w-64 h-64 sm:w-80 sm:h-80 bg-primary/15 rounded-full blur-[60px] sm:blur-[80px]"
       />
 
       <div className="container mx-auto px-4 relative">

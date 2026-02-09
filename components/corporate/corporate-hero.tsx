@@ -56,7 +56,7 @@ export function CorporateHero() {
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-2xl" />
             <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl shadow-primary/10">
               <Image
-                src="/corporate-espejo-magico-luanti.jpg"
+                src="/corporate-espejo-magico-luanti.webp"
                 alt="Espejo Mágico Luanti en evento corporativo con alfombra roja"
                 fill
                 className="object-cover"

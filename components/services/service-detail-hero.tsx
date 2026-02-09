@@ -15,9 +15,9 @@ const iconMap = {
 }
 
 const imageMap: Record<string, string> = {
-  "espejo-magico": "/services/espejo-magico-real.png",
-  "cabina-360": "/services/cabina-360-real.png",
-  "telefono-dedicatorias": "/services/telefono-dedicatorias-real.jpg",
+  "espejo-magico": "/services/espejo-magico-real.webp",
+  "cabina-360": "/services/cabina-360-real.webp",
+  "telefono-dedicatorias": "/services/telefono-dedicatorias-real.webp",
 }
 
 interface ServiceDetailHeroProps {

@@ -11,19 +11,19 @@ import Link from "next/link"
 
 const serviceImages = [
   {
-    src: "/services/espejo-magico-info.png",
+    src: "/services/espejo-magico-info.webp",
     alt: "Espejo Mágico - $6,000 MXN",
     name: "Espejo Mágico",
     slug: "espejo-magico",
   },
   {
-    src: "/services/cabina-360-info.png",
+    src: "/services/cabina-360-info.webp",
     alt: "Cabina 360 - $6,000 MXN",
     name: "Cabina 360",
     slug: "cabina-360",
   },
   {
-    src: "/services/telefono-dedicatorias-info.png",
+    src: "/services/telefono-dedicatorias-info.webp",
     alt: "Teléfono de Dedicatorias - $5,000 MXN",
     name: "Teléfono de Dedicatorias",
     slug: "telefono-dedicatorias",
