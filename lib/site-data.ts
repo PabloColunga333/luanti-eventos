@@ -61,7 +61,7 @@ export const services: Service[] = [
     ],
     requirements: {
       space: "Mínimo 2x2 m",
-      power: "En el apartado de energía eléctrica: Toma eléctrica funcional que este a menos o igual a 20m de distancia de donde se instalará el equipo.",
+      power: "Toma eléctrica funcional que este a menos o igual a 20m de distancia de donde se instalará el equipo.",
       setupTime: "30 minutos antes del evento",
       teardownTime: "Inmediatamente después de terminar el horario de trabajo contratado y este tendrá una duración de 1 hora.",
     },
@@ -106,7 +106,7 @@ export const services: Service[] = [
     ],
     requirements: {
       space: "Mínimo 3x3 m",
-      power: "En el apartado de energía eléctrica: Toma eléctrica funcional que este a menos o igual a 20m de distancia de donde se instalará el equipo.",
+      power: "Toma eléctrica funcional que este a menos o igual a 20m de distancia de donde se instalará el equipo.",
       setupTime: "30 minutos antes del evento",
       teardownTime: "Inmediatamente después de terminar el horario de trabajo contratado y este tendrá una duración de 1 hora.",
     },
