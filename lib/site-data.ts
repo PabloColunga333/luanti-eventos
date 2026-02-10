@@ -144,7 +144,7 @@ export const services: Service[] = [
     ],
     requirements: {
       space: "Espacio tipo mesa 1x1 m",
-      power: "Toma eléctrica funcional",
+      power: "No requiere contacto eléctrico",
       setupTime: "30 minutos antes del evento",
     },
     addons: ["Hora extra - $1,500 MXN"],
