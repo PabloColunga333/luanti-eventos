@@ -43,7 +43,7 @@ export const services: Service[] = [
     shortDescription:
       "Experiencia interactiva elegante ideal para bodas, XV años, cumpleaños y eventos corporativos.",
     description:
-      "Cabina interactiva de cuerpo completo con animaciones y fotos instantáneas. Tus invitados posan frente al espejo, reciben indicaciones en pantalla y se llevan impresiones al momento.",
+      "Cabina fotográfica interactiva de cuerpo completo con animaciones y fotos instantáneas. Tus invitados posan frente al espejo, reciben indicaciones en pantalla y se llevan impresiones al momento.",
     heroTitle: "Espejo Mágico",
     heroSubtitle:
       "Experiencia interactiva elegante ideal para bodas, XV años, cumpleaños y eventos corporativos.",
