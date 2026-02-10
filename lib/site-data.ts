@@ -118,6 +118,11 @@ export const services: Service[] = [
         answer: "Sí, siempre que haya un área techada y protegida del viento.",
       },
       {
+        question: "¿Se puede personalizar los videos?",
+        answer:
+          "Sí,  se pueden personalizar con el logo de la empresa o fiesta , nombre de la quinceañera o de los novios, además pueden indicarnos la canción que deseen que se escuche al reproducirse los videos.\n\nLas preferencias de personalización deben enviarlas máximo 2 semanas antes del evento.",
+      },
+      {
         question: "¿Cómo reciben los videos mis invitados?",
         answer: "El contenido se entrega mediante descargas instantáneas.",
       },
