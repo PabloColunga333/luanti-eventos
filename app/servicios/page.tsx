@@ -4,9 +4,19 @@ import { ServicesList } from "@/components/services/services-list"
 import { CTASection } from "@/components/cta-section"
 
 export const metadata: Metadata = {
-  title: "Servicios",
+  title: "Servicios de Espejo Mágico, Cabina 360 y Teléfono de Dedicatorias",
   description:
-    "Conoce nuestros servicios de entretenimiento para eventos: Espejo Mágico, Cabina 360 y Teléfono de Mensajes. Fotos, videos y recuerdos para tu celebración.",
+    "Servicios para eventos en CDMX, Querétaro y Toluca: Espejo Mágico, Cabina 360 y Teléfono de Dedicatorias. Fotos, videos y recuerdos para tu celebración.",
+  keywords: [
+    "espejo mágico",
+    "cabina 360",
+    "teléfono de dedicatorias",
+    "foto cabina",
+    "photo booth",
+    "eventos CDMX",
+    "eventos Querétaro",
+    "eventos Toluca",
+  ],
 }
 
 export default function ServiciosPage() {
