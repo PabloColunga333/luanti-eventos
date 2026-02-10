@@ -60,7 +60,7 @@ export const services: Service[] = [
     ],
     requirements: {
       space: "Mínimo 2x2 m",
-      power: "Toma eléctrica funcional",
+      power: "En el apartado de energía eléctrica: Toma eléctrica funcional que este a menos o igual a 20m de distancia de donde se instalará el equipo.",
       setupTime: "30 minutos antes del evento",
     },
     addons: ["Hora extra - $1,500 MXN"],
