@@ -76,7 +76,7 @@ export const services: Service[] = [
       {
         question: "¿Puedo personalizar el diseño de las fotos?",
         answer:
-          "Sí, personalizamos diseños y música. Las preferencias deben enviarse con dos semanas de anticipación.",
+          "Sí,  personalizamos el marco impreso con el logo de la fiesta o empresa, nombre de la quinceañera o de los novios.\nLas preferencias deben enviarse con dos semanas de anticipación.",
       },
     ],
   },
