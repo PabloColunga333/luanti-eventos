@@ -57,7 +57,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
               <AlertCircle className="w-6 h-6 text-primary" />
               Requerimientos
             </h2>
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div>
                 <p className="text-sm text-muted-foreground mb-1">Espacio mínimo</p>
                 <p className="font-medium">{service.requirements.space}</p>
@@ -69,6 +69,10 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
               <div>
                 <p className="text-sm text-muted-foreground mb-1">Tiempo de montaje</p>
                 <p className="font-medium">{service.requirements.setupTime}</p>
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground mb-1">Tiempo de desmontaje</p>
+                <p className="font-medium">{service.requirements.teardownTime}</p>
               </div>
             </div>
           </motion.div>
