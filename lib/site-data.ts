@@ -378,15 +378,18 @@ export const faqs: FAQ[] = [
     questions: [
       {
         question: "¿Qué espacio y requisitos se necesitan para el Espejo Mágico?",
-        answer: "Espacio mínimo de 2x2 m y una toma eléctrica funcional.",
+        answer:
+          "Espacio mínimo de 2x2 m y toma eléctrica funcional que este a menos o igual a 20m de distancia de donde se instalará el equipo. Tiempo de montaje: 30 minutos antes del evento. Tiempo de desmontaje: inmediatamente después de terminar el horario de trabajo contratado y este tendrá una duración de 1 hora.",
       },
       {
         question: "¿Qué espacio y requisitos se necesitan para la Cabina 360?",
-        answer: "Espacio mínimo de 3x3 m y una toma eléctrica funcional.",
+        answer:
+          "Espacio mínimo de 3x3 m y toma eléctrica funcional que este a menos o igual a 20m de distancia de donde se instalará el equipo. Tiempo de montaje: 30 minutos antes del evento. Tiempo de desmontaje: inmediatamente después de terminar el horario de trabajo contratado y este tendrá una duración de 1 hora.",
       },
       {
         question: "¿Qué espacio y requisitos se necesitan para el Teléfono de Dedicatorias?",
-        answer: "Espacio tipo mesa 1x1 m y una toma eléctrica funcional.",
+        answer:
+          "Espacio tipo mesa 1x1 m. No requiere contacto eléctrico. Tiempo de montaje: 30 minutos antes del evento. Tiempo de desmontaje: inmediatamente después de terminar el horario de trabajo contratado y este tendrá una duración de 1 hora.",
       },
     ],
   },
